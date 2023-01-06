@@ -9,3 +9,12 @@ my_print()
 def new_print(text):
     print(text * 2)
 new_print('hola')
+
+a = 10
+b = 90
+
+c = a + b
+
+def suma(a, b):
+    print(a + b)
+suma(4,9)
