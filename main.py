@@ -1,6 +1,8 @@
 import this
 
 '''
+Python manifesto:
+
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
