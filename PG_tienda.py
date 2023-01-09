@@ -30,6 +30,8 @@ Input: 'ornitorrinco'
 Output: Artículo no encontrado
 """
 
+# Solución:
+
 def message_creator(text):
    # Escribe tu solución 👇
    items = {'computadora': 'Con mi conputadora puedo programar usando Python', 'celular': 'En mi celular puedo aprender usando la app de Platzi', 'cable': 'Hay un cable en mi bota!'}
