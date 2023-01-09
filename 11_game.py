@@ -63,7 +63,6 @@ def check_rules(user_option, computer_option, user_wins, computer_wins):
             print(f'Rival: {computer_wins}pts - Tú {user_wins}pts')
             
     return user_wins, computer_wins
-    
 
 def run_game():
     computer_wins = 0
