@@ -21,7 +21,7 @@ print(prices)
 # Adding taxes
 
 def add_taxes(item):
-    new_item = item.copy()
+    new_item = item.copy() # Inmutability: creating a copy of the original list so it remains unchanged. Working on the copy.
     new_item['taxes'] = new_item['price'] * .19
     return new_item
 
