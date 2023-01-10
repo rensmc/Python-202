@@ -9,5 +9,6 @@ numbers = ('1234567890')
 symbols = ('|@!#$%&/()=?¡^-*')
 chars = mayus + minus + numbers + symbols
 
-password = "".join(random.sample(chars,length))
+password = ''
+password = password.join(random.sample(chars,length))
 print(password)
