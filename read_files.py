@@ -15,6 +15,7 @@ files = [
 ]
 
 new_list = files.copy()
+print("Reading files, please wait...")
 
 # Counts the numbers of rows on every file in files{}. Adds it to the dictionary list as row_count
 for file in files:
@@ -25,5 +26,5 @@ for file in files:
 df = pd.DataFrame(files) # declare dataframe
 output = input("Name your file => ") # Ask the user for desired filename
 df.to_csv(output + ".csv", sep=',', encoding='utf-8', index=False) # Creating csv file
-
-print('Done ✅')
+#print(files)
+print(f'Results have been succesfully saved on file: {output} \nDone ✅')
