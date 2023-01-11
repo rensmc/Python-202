@@ -1,18 +1,29 @@
-# Count the number of lines in a CSV
+# Count the number of lines in a CSV,
+# add the number to each dictionary as row_count 
+# and create a csv file with the results
 
 # import module
 import pandas as pd
 
-# List with the names of the files. The csv files and this file should be hosted on the same folder.
+# List of dictionaries with the names of the files. 
+# The csv files and this file should be hosted on the same folder.
 files = [
-    'this_is_a_csv_file1.csv',
-    'this_is_a_csv_file2.csv',
-    'this_is_a_csv_file3.csv',
-    'this_is_a_csv_file4.csv'
+    {'filename': 'this_is_a_csv_file1.csv'},
+    {'filename': 'this_is_a_csv_file2.csv'},
+    {'filename': 'this_is_a_csv_file3.csv'},
+    {'filename': 'this_is_a_csv_file4.csv'}
 ]
 
-# Counts the numbers of rows on every file in files{}.
+new_list = files.copy()
+
+# Counts the numbers of rows on every file in files{}. Adds it to the dictionary list as row_count
 for file in files:
-    results = pd.read_csv(str(file), sep=',', index_col=False, dtype='unicode', low_memory=False, on_bad_lines='skip')
-    print(str(file)) # Prints the filename
-    print(len(results)) # Prints the number of records it contains
+    results = pd.read_csv(str(file['filename']), sep=',', index_col=False, dtype='unicode', low_memory=False, on_bad_lines='skip')
+    file['row_count'] = len(results)
+
+# Saving results to a csv file.
+df = pd.DataFrame(files) # declare dataframe
+output = input("Name your file => ") # Ask the user for desired filename
+df.to_csv(output + ".csv", sep=',', encoding='utf-8', index=False) # Creating csv file
+
+print('Done ✅')
