@@ -3,8 +3,8 @@
 import random
 
 length = int(input("Please indicate the password's length => "))
-mayus = ('ABCDEFGHIJKLMNOPQRSTUVXYZ')
-minus = ('abcdefghijklmnopqrstuvwxyz')
+mayus = ('ABCDEFGHIJKLMNÑOPQRSTUVXYZ')
+minus = ('abcdefghijklmnñopqrstuvwxyz')
 numbers = ('1234567890')
 symbols = ('|@!#$%&/()=?¡^-*')
 chars = mayus + minus + numbers + symbols
