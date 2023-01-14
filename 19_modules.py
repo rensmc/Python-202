@@ -16,5 +16,5 @@ print(result)
 
 import collections # Mainly for managing lists
 numbers = [1, 1, 2, 1, 2, 1, 4, 5, 3, 3, 21]
-counter = collections.counter(numbers) # Creates a dictionary with the frecuency of each number
+counter = collections.Counter(numbers) # Creates a dictionary with the frecuency of each number
 print(counter)
