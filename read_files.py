@@ -14,16 +14,16 @@ files = [
     {'filename': 'this_is_a_csv_file4.csv'}
 ]
 
-new_list = files.copy()
+file_list = files.copy()
 print("Reading files, please wait... ☕️")
 
 # Counts the numbers of rows on every file in files{}. Adds it to the dictionary list as row_count
-for file in files:
+for file in file_list:
     results = pd.read_csv(str(file['filename']), sep=',', index_col=False, dtype='unicode', low_memory=False, on_bad_lines='skip')
     file['row_count'] = len(results)
 
 # Saving results to a csv file.
-df = pd.DataFrame(files) # declare dataframe
+df = pd.DataFrame(file_list) # declare dataframe
 output = input("Name your file => ") # Ask the user for desired filename
 df.to_csv(output + ".csv", sep=',', encoding='utf-8', index=False) # Creating csv file
 #print(files)
