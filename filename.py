@@ -2,11 +2,15 @@ import os
 
 files = []
 
-# Getting the filenames of our cdv files in the current directory
-for file in os.listdir():
-    if ".py" in file:
-        continue
-    if os.path.isfile(file):
-        files.append(file)
-print(files)
+# Getting the filenames of our csv files in the current directory
+
+def read_filenames():
+    for file in os.listdir():
+        if ".csv" in file:
+            files.append(file)
+        else:
+            continue
+
 #print(os.listdir())
+read_filenames()
+print(files)
