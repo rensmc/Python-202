@@ -1,10 +1,19 @@
 import os
 import sys
+# Local imports
+import modules as mdls
 
-script_dir = os.path.dirname( __file__ )
-mymodule_dir = os.path.join( script_dir, '..')
-sys.path.append( mymodule_dir )
+files = []
 
-import filename as fnm
-fnm.read_filenames()
+mdls.read_filenames(files)
+print(files)
+
+files = [
+    {'filename': 'this_is_a_csv_file1.csv'},
+    {'filename': 'this_is_a_csv_file2.csv'},
+    {'filename': 'this_is_a_csv_file3.csv'},
+    {'filename': 'this_is_a_csv_file4.csv'}
+]
+
+mdls.read_files(files)
 print(files)
