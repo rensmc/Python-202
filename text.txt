@@ -9,3 +9,5 @@ li
 lin
 line
 line 4
+last line
+Writing new stuff on the file
