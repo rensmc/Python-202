@@ -3,10 +3,13 @@ import yfinance as yf
 def get_company_officers(ticker):
     try:
         stock = yf.Ticker(ticker)
+
+        print("Company: " + stock.info.get('shortName', ''))
+        print("Website: " + stock.info.get('website', ''))
+        print("Sector: " + stock.info.get('sector', ''))
+        
         company_officers = stock.info["companyOfficers"]
-        print("Company: " + stock.info["shortName"])
-        print("Website: " + stock.info["website"])
-        for officer in company_officers[:3]:
+        for officer in company_officers[:4]:
             print(officer["name"], officer["title"])
     except:
         print(f"No company officers found for {ticker}")
