@@ -4,6 +4,8 @@ def get_company_officers(ticker):
     try:
         stock = yf.Ticker(ticker)
         company_officers = stock.info["companyOfficers"]
+        print("Company: " + stock.info["shortName"])
+        print("Website: " + stock.info["website"])
         for officer in company_officers[:3]:
             print(officer["name"], officer["title"])
     except:
