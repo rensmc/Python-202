@@ -7,6 +7,7 @@ def get_company_officers(ticker):
         print("Company: " + stock.info.get('shortName', ''))
         print("Website: " + stock.info.get('website', ''))
         print("Sector: " + stock.info.get('sector', ''))
+        print("Market Cap: " + str(stock.info.get('marketCap', '')))
         
         company_officers = stock.info["companyOfficers"]
         for officer in company_officers[:4]:
